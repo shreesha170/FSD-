@@ -1,0 +1,182 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+    background-color: #333;
+    padding: 1em 0;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+nav .logo img {
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+nav .logo span {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background: url('images/travel.jpg');
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: white;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: white;
+}
+
+
+#tours {
+    background-image: url('images/bg.jpg');
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tour-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tour-box h3 {
+    margin: 10px 0;
+}
+
+.tour-box p {
+    margin: 10px 0 0;
+}
+
+
+#plans {
+    background-image: url('images/plan.jpg');
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.plan-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan-box h3 {
+    margin: 10px 0;
+}
+
+.plan-box p {
+    margin: 10px 0 0;
+}
+
+
+#testimonials {
+    background-image: url('images/bali-tour.jpg');
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-box {
+    background-color: #f4f4f4;
+    /* background-color: #444; */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box p {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-contact div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-contact h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}

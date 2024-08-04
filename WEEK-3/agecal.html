@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Age Calculator</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    /* text-align: center; */
+    text-size-adjust: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pet Age Calculator</h1>
+        <form id="petAgeForm">
+            <div class="input-section">
+                <label for="petAge">Pet's Age:</label>
+                <input type="number" id="petAge" required>
+            </div>
+            <div class="input-section">
+                <label for="conversionRate">Conversion Rate:</label>
+                <input type="number" id="conversionRate" value="7" required>
+            </div>
+            <button type="submit">Calculate Pet Age</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+    function calculatePetAge(petAge, conversionRate)  
+    {
+    const petYears = petAge * conversionRate;
+    return petYears;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+    const petAgeForm = document.getElementById('petAgeForm');
+    const result = document.getElementById('result');
+
+    petAgeForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const petAge = document.getElementById('petAge').value;
+        const conversionRate = document.getElementById('conversionRate').value;
+        const petYears = calculatePetAge(petAge, conversionRate);
+        result.textContent = `Your pet is ${petYears} years old in pet years!`;
+    });
+
+    // Call the function three times with different ages and conversion rates
+    console.log(`Kitty is ${calculatePetAge(2, 7)} years old in cat years.`);
+    console.log(`Doggy is ${calculatePetAge(3, 7)} years old in dog years.`);
+    console.log(`Parrot is ${calculatePetAge(5, 4)} years old in parrot years.`);
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <div id="employee-list"></div>
+        
+        <div class="actions">
+            <h2>Calculate Average Salary</h2>
+            <button onclick="showAverageSalary()">Calculate</button>
+            <p id="average-salary"></p>
+        </div>
+        
+        <div class="actions">
+            <h2>Find Employees in Department</h2>
+            <input type="text" id="department-name" placeholder="Enter department">
+            <button onclick="showEmployeesInDepartment()">Find</button>
+            <div id="department-employees"></div>
+        </div>
+        
+        <div class="actions">
+            <h2>Increase Salary</h2>
+            <input type="number" id="increase-percentage" placeholder="Enter percentage">
+            <button onclick="increaseEmployeeSalaries()">Increase</button>
+            <div id="increased-salaries"></div>
+        </div>
+        
+        <div class="actions">
+            <h2>Sort Employees by Age</h2>
+            <button onclick="sortAndDisplayEmployeesByAge()">Sort</button>
+            <div id="sorted-employees"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            color:whitesmoke;
+            background-color: rgb(187, 165, 194);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            padding: 5px;
+            width: calc(100% - 12px);
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #b2cdea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Distance Converter</h1>
+        <label for="distanceMeters">Distance in Meters:</label>
+        <input type="number" id="distanceMeters" placeholder="Enter distance in meters">
+        <button onclick="convertMetersToFeet()">Convert to Feet</button>
+        <p id="metersToFeetResult"></p>
+
+        <label for="distanceFeet">Distance in Feet:</label>
+        <input type="number" id="distanceFeet" placeholder="Enter distance in feet">
+        <button onclick="convertFeetToMeters()">Convert to Meters</button>
+        <p id="feetToMetersResult"></p>
+    </div>
+
+    <script>
+        function metersToFeet(meters) {
+            const feet = meters * 3.281;
+            return feet;
+        }
+
+        function feetToMeters(feet) {
+            const meters = feet * 0.3048;
+            return meters;
+        }
+
+        function convertMetersToFeet() {
+            const meters = parseFloat(document.getElementById('distanceMeters').value);
+            if (isNaN(meters) || meters < 0) {
+                alert('Please enter a valid distance in meters.');
+                return;
+            }
+            const feet = metersToFeet(meters);
+            document.getElementById('metersToFeetResult').textContent = `${meters} meters is equal to ${feet.toFixed(2)} feet.`;
+        }
+
+        function convertFeetToMeters() {
+            const feet = parseFloat(document.getElementById('distanceFeet').value);
+            if (isNaN(feet) || feet < 0) {
+                alert('Please enter a valid distance in feet.');
+                return;
+            }
+            const meters = feetToMeters(feet);
+            document.getElementById('feetToMetersResult').textContent = `${feet} feet is equal to ${meters.toFixed(2)} meters.`;
+        }
+
+        // Example function calls
+        console.log(`Example 1: 10 meters is equal to ${metersToFeet(10).toFixed(2)} feet.`);
+        console.log(`Example 2: 50 feet is equal to ${feetToMeters(50).toFixed(2)} meters.`);
+    </script>
+</body>
+</html>

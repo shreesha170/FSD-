@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fortune Teller</h1>
+        <button onclick="tellFortune(2, 'Amar', 'Bangalore', 'Software Engineer')">Tell Fortune 1</button>
+        <button onclick="tellFortune(3, 'Viraj', 'Los Angeles', 'Doctor')">Tell Fortune 2</button>
+        <button onclick="tellFortune(1, 'James', 'Chicago', 'Artist')">Tell Fortune 3</button>
+        <p id="fortuneResult"></p>
+    </div>
+
+    <script>
+        function tellFortune(numChildren, partnerName, location, jobTitle) {
+            const fortune = `You will be a ${jobTitle} in ${location}, and married to ${partnerName} with ${numChildren} kids.`;
+            document.getElementById('fortuneResult').textContent = fortune;
+        }
+
+        // Example function calls
+        console.log(tellFortune(2, 'Amar', 'Bangalore', 'Software Engineer'));
+        console.log(tellFortune(3, 'Viraj', 'Los Angeles', 'Doctor'));
+        console.log(tellFortune(1, 'James', 'Chicago', 'Artist'));
+    </script>
+</body>
+</html>
